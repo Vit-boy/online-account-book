@@ -8,6 +8,7 @@ import ViewTab from './components/ViewTab'
 import {LIST_VIEW, CHART_VIEW} from './utility'
 import TotalPrice from './components/TotalPrice'
 import MonthPicker from './components/MonthPicker'
+import CreateBtn from './components/CreateBtn'
 
 
 const items = [
@@ -54,10 +55,8 @@ function App() {
           Learn React
         </a>
       </header>
-      <MonthPicker
-        year={2018}
-        month={5}
-        onChange={(year, month) => {console.log(year, month)}}
+      <CreateBtn
+        onClick={(e) => {}}
       />
     </div>
   );
