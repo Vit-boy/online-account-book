@@ -7,6 +7,7 @@ import PriceList from './components/PriceList'
 import ViewTab from './components/ViewTab'
 import {LIST_VIEW, CHART_VIEW} from './utility'
 import TotalPrice from './components/TotalPrice'
+import MonthPicker from './components/MonthPicker'
 
 
 const items = [
@@ -53,7 +54,11 @@ function App() {
           Learn React
         </a>
       </header>
-      <TotalPrice income={200} outcome={400} />
+      <MonthPicker
+        year={2018}
+        month={5}
+        onChange={(year, month) => {console.log(year, month)}}
+      />
     </div>
   );
 }
