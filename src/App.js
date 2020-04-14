@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import PriceList from './components/PriceList'
 import ViewTab from './components/ViewTab'
 import {LIST_VIEW, CHART_VIEW} from './utility'
+import TotalPrice from './components/TotalPrice'
 
 
 const items = [
@@ -52,10 +53,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <ViewTab
-        activeTab={LIST_VIEW}
-        onTabChange={(view) => {console.log(view)}}
-      />
+      <TotalPrice income={200} outcome={400} />
     </div>
   );
 }
