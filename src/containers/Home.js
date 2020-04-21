@@ -8,7 +8,7 @@ import TotalPrice from '../components/TotalPrice'
 import MonthPicker from '../components/MonthPicker'
 import CreateBtn from '../components/CreateBtn'
 
-const items = [
+export const items = [
     {
       "id": 1,
       "title": "去云南旅游",
@@ -32,7 +32,7 @@ const items = [
     }
 ]
 
-const categoies = {
+export const categoies = {
     "1": {
       "id": 1,
       "name": "旅行",
@@ -112,7 +112,6 @@ class Home extends React.Component {
         }).filter(item => {
             return item.date.includes(`${currentDate.year}-${padLeft(currentDate.month)}`)
         })
-        console.log(itemsWithCategory)
         let totalIncome = 0, totalOutcome = 0
         itemsWithCategory.forEach(item => {
             if (item.category.type === TYPE_OUTCOME) {
