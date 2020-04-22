@@ -27,8 +27,13 @@ describe('test ViewTab component', () => {
     })
 
     it('click the 2nd Tab should change the active stauts and trigger the right function', () => {
+        props.onTabChange = (view) => {
+            props.activeTab = view
+        }
+        wrapper = shallow(<ViewTab {...props} />)
         wrapper.find('.nav-link').last().simulate('click', { preventDefault: () => {}})
+        wrapper = shallow(<ViewTab {...props} />)
         expect(wrapper.find('.nav-link').first().hasClass('active')).toEqual(false)
-        expect(wrapper.find('.nav-link').last().hasClass('active')).toEqual(false)
+        expect(wrapper.find('.nav-link').last().hasClass('active')).toEqual(true)
     })
 })

@@ -27,7 +27,7 @@ export const items = [
       "id": 3,
       "title": "理财收入 ",
       "price": 200,
-      "date": "2018-09-10",
+      "date": "2018-10-10",
       "cid": 2
     }
 ]
@@ -47,7 +47,7 @@ export const categoies = {
     }
 }
 
-const newItem = {
+export const newItem = {
     "id": 4,
     "title": "新添加的项目",
     "price": 300,
@@ -60,7 +60,7 @@ class Home extends React.Component {
         super(props)
         this.state = {
             items,
-            currentDate: parseToYearAndMonth(),
+            currentDate: parseToYearAndMonth('2018/10/01'),
             tabView: LIST_VIEW
         }
     }
@@ -158,7 +158,7 @@ class Home extends React.Component {
                         />
                     }
                     {tabView === CHART_VIEW &&
-                        <h1>这里是图标区域</h1>
+                        <h1 className="chart-title">这里是图标区域</h1>
                     }
                 </div>
             </React.Fragment>
